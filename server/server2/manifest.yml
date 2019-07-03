@@ -1,0 +1,9 @@
+applications:
+- buildpack: sdk-for-nodejs_v3_27-20190530-0937
+  command: npm start
+  instances: 1
+  memory: 256MB
+  name: websoc-cminion
+  routes:
+  - route: websoc-cminion.us-south.cf.appdomain.cloud
+  timeout: 180
