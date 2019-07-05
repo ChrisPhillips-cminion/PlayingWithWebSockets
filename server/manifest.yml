@@ -4,6 +4,4 @@ applications:
   instances: 1
   memory: 256MB
   name: websoc-cminion
-  routes:
-  - route: websoc-cminion.us-south.cf.appdomain.cloud
   timeout: 180

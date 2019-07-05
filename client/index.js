@@ -1,14 +1,19 @@
-const WebSocket = require('ws')
-// const url = 'ws://localhost:3000'
-// const url = 'https://rare-seahorse-54.localtunnel.me'
-const url = 'ws://idg-perf.apicww.cloud:3080'
-// const url = 'wss://websoc-cminion.us-south.cf.appdomain.cloud'
+//This sample is based off the examples on https://www.npmjs.com/package/ws
 
-const connection = new WebSocket(url)
+const WebSocket = require('ws')
+const url = 'ws://localhost:8080'
+'
+const connection = new WebSocket(url, {
+  headers: {
+    "x-ibm-client-id": "",
+    "x-ibm-client-secret": "secret"
+  }
+})
 
 
 connection.onopen = () => {
-  connection.send('hey')
+  console.log("Connected to " + url)
+  connection.send('I AM CONNECTED')
 }
 
 
