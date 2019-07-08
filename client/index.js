@@ -2,10 +2,10 @@
 
 const WebSocket = require('ws')
 const url = 'ws://localhost:8080'
-'
+
 const connection = new WebSocket(url, {
   headers: {
-    "x-ibm-client-id": "",
+    "x-ibm-client-id": "ID",
     "x-ibm-client-secret": "secret"
   }
 })
