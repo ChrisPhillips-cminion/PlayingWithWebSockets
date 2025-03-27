@@ -11,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sleep": "^6.1.0",
-    "ws": "^7.0.1"
+    "sleep": "^6.3.0",
+    "ws": "^7.5.10"
   },
   "engines": {
     "node": "12.x",

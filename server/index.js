@@ -6,6 +6,10 @@ const sleep = require("sleep").sleep
 const wss = new WebSocket.Server({
   port: process.env.port || 8080
 })
+
+wss.binaryType = "arraybuffer";
+
+
 console.log(`WS Started`)
 
 wss.on('connection', ws => {

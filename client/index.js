@@ -1,9 +1,11 @@
 //This sample is based off the examples on https://www.npmjs.com/package/ws
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 const WebSocket = require('ws')
 const fs = require('fs')
-const url = 'ws://localhost:8080'
+const url = 'ws://small-gw-0-cp4i.apps.buttons.hur.hdclab.intranet.ibm.com'
 
+// const url = 'ws://127.0.0.1:8080'
 const connection = new WebSocket(url, {
   headers: {
     "x-ibm-client-id": "ID",
@@ -11,6 +13,7 @@ const connection = new WebSocket(url, {
   }
 })
 
+connection.binaryType = "arraybuffer";
 
 connection.onopen = () => {
   console.log("Connected to " + url)
