@@ -39,8 +39,8 @@ objects:
       runPolicy: Serial
       source:
         git:
-          ref: main
-          uri: https://github.com/ChrisPhillips-cminion/dumbExpress
+          ref: master
+          uri: https://github.com/ChrisPhillips-cminion/PlayingWithWebSockets
       strategy:
         dockerStrategy:
           from:
@@ -57,7 +57,7 @@ parameters:
   - name: APPLICATION_NAME
     description: "The name of the Image stream (output)."
     required: false
-    value: "dumbExpress"
+    value: "websockets"
   - name: APP_NAMESPACE
     description: "The namespace where the BuildConfig will be executed."
     required: true

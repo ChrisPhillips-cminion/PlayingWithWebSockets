@@ -11,7 +11,7 @@ objects:
     name: ${APPLICATION_NAME}
     namespace: ${APP_NAMESPACE}
   spec:
-    replicas: 50
+    replicas: 1
     revisionHistoryLimit: 1
     selector:
       app: ${APPLICATION_NAME}

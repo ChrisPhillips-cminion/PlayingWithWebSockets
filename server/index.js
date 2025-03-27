@@ -7,7 +7,7 @@ const wss = new WebSocket.Server({
   port: process.env.port || 8080
 })
 console.log(`WS Started`)
-var stack  = []
+
 wss.on('connection', ws => {
 
   console.log(`Got Connection`)
