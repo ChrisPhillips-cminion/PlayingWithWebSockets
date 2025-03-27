@@ -1,6 +1,7 @@
 //This sample is based off the examples on https://www.npmjs.com/package/ws
 
 const WebSocket = require('ws')
+const fs = require('fs')
 const url = 'ws://localhost:8080'
 
 const connection = new WebSocket(url, {
@@ -13,7 +14,10 @@ const connection = new WebSocket(url, {
 
 connection.onopen = () => {
   console.log("Connected to " + url)
-  connection.send('I AM CONNECTED')
+
+  let img  = fs.readFileSync('./image-38.png');
+
+  connection.send(img)
 }
 
 

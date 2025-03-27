@@ -9,12 +9,15 @@ const wss = new WebSocket.Server({
 console.log(`WS Started`)
 var stack  = []
 wss.on('connection', ws => {
-  console.log(JSON.stringify(ws))
+
   console.log(`Got Connection`)
   ws.send("Connection Established");
-    ws.send(JSON.stringify(ws))
+
   ws.on('message', message => {
-    console.log(`Received message => ${message}`)
+    console.log(`Received message => ${message.length}`)
+    sleep(5)
+    ws.send(message)
+    
   })
 })
 wss.on('error',ws => {
