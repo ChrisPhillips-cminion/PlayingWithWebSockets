@@ -4,8 +4,7 @@ WORKDIR /app
 
 
 # install simple http server for serving static content
-RUN npm install  express sleep xmlbuilder
-
+RUN npm install ws sleep
 # make the 'app' folder the current working directory
 
 # copy both 'package.json' and 'package-lock.json' (if available)

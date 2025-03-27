@@ -38,9 +38,11 @@ objects:
       resources: {}
       runPolicy: Serial
       source:
+        contextDir: "server" 
         git:
           ref: master
           uri: https://github.com/ChrisPhillips-cminion/PlayingWithWebSockets
+
       strategy:
         dockerStrategy:
           from:
