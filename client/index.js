@@ -8,12 +8,11 @@ const url = 'ws://small-gw-0-cp4i.apps.buttons.hur.hdclab.intranet.ibm.com'
 // const url = 'ws://127.0.0.1:8080'
 const connection = new WebSocket(url, {
   headers: {
-    "x-ibm-client-id": "ID",
-    "x-ibm-client-secret": "secret"
+    "x-ibm-client-id": "xx"
   }
 })
 
-connection.binaryType = "arraybuffer";
+connection.binaryType = "blob";
 
 connection.onopen = () => {
   console.log("Connected to " + url)

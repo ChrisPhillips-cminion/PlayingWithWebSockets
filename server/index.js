@@ -7,8 +7,7 @@ const wss = new WebSocket.Server({
   port: process.env.port || 8080
 })
 
-wss.binaryType = "arraybuffer";
-
+wss.binaryType = "blob";
 
 console.log(`WS Started`)
 
